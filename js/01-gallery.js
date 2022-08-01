@@ -3,6 +3,20 @@ import { galleryItems } from './gallery-items.js';
 
 console.log(galleryItems);
 
+// ADD SCRIPT AND STYLES
+const headEl = document.querySelector('head');
+const styles = `<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.css"
+></link>`;
+headEl.insertAdjacentHTML('beforeend', styles);
+
+const script = document.createElement('script');
+script.src = 'https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.js';
+document.body.appendChild(script);
+
+// GALLERY MARKUP
+
 const galleryEl = document.querySelector('.gallery');
 
 const galleryMarkup = galleryItems
