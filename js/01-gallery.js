@@ -23,20 +23,33 @@ const galleryMarkup = galleryItems
 galleryEl.insertAdjacentHTML('afterbegin', galleryMarkup);
 galleryEl.addEventListener('click', onClick);
 
+const showBigImg = basicLightbox.create(
+  `
+    <img src="" width="800" height="600">
+`,
+  {
+    onShow: showBigImg => {
+      window.addEventListener('keydown', onKeyClick);
+    },
+    onClose: showBigImg => {
+      window.removeEventListener('keydown', onKeyClick);
+    },
+  }
+);
+
 function onClick(evt) {
   evt.preventDefault();
   if (evt.target.nodeName !== 'IMG') {
     return;
   }
-  const showBigImg = basicLightbox.create(`
-    <img src="${evt.target.dataset.source}" width="800" height="600">
-`);
+  showBigImg.element().querySelector('img').src = evt.target.dataset.source;
   showBigImg.show();
+}
 
-  window.addEventListener('keydown', onKeyClick);
-
-  function onKeyClick() {
+function onKeyClick(evt) {
+  if (evt.key === 'Escape') {
     showBigImg.close();
-    window.removeEventListener('keydown', onKeyClick);
+    return;
   }
+  console.log(evt.key);
 }
