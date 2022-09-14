@@ -23,3 +23,46 @@
 модальном окне. Посмотри демо видео работы галереи.
 
 <video src="https://user-images.githubusercontent.com/17479434/127711719-4e293f5b-fbaa-4851-8671-fc841963d961.mp4" preload="auto" controls="" style="width: 100%; height: 100%;"></video>
+
+Выполняй это задание в файлах `01-gallery.html` и `01-gallery.js`. Разбей его на несколько подзадач:
+
+1. Создание и рендер разметки по массиву данных `galleryItems` и предоставленному шаблону элемента
+   галереи.
+2. Реализация делегирования на `div.gallery` и получение `url` большого изображения.
+3. Подключение скрипта и стилей библиотеки модального окна
+   [basicLightbox](https://basiclightbox.electerious.com). Используй
+   [CDN сервис jsdelivr](https://www.jsdelivr.com/package/npm/basiclightbox?path=dist) и добавь в
+   проект ссылки на минифицированные (`.min`) файлы библиотеки.
+4. Открытие модального окна по клику на элементе галереи. Для этого ознакомься с
+   [документацией](https://github.com/electerious/basicLightbox#readme) и
+   [примерами](https://basiclightbox.electerious.com).
+5. Замена значения атрибута `src` элемента `<img>` в модальном окне перед открытием. Используй
+   готовую разметку модального окна с изображением из примеров библиотеки
+   [basicLightbox](https://basiclightbox.electerious.com).
+
+## Разметка элемента галереи
+
+Ссылка на оригинальное изображение должна храниться в data-атрибуте `source` на элементе `<img>`, и
+указываться в `href` ссылки. Не добавляй другие HTML теги или CSS классы кроме тех, что есть в этом
+шаблоне.
+
+```html
+<div class="gallery__item">
+  <a class="gallery__link" href="large-image.jpg">
+    <img
+      class="gallery__image"
+      src="small-image.jpg"
+      data-source="large-image.jpg"
+      alt="Image description"
+    />
+  </a>
+</div>
+```
+
+Обрати внимание на то, что изображение обернуто в ссылку, а значит при клике по умолчанию
+пользователь будет перенаправлен на другую страницу. Запрети это поведение по умолчанию.
+
+## Закрытие с клавиатуры
+
+<div class="theme-admonition theme-admonition-caution alert alert--warning admonition_LlT9"><div class="admonitionHeading_tbUL"><span class="admonitionIcon_kALy"><svg viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"></path></svg></span>Внимание</div><div class="admonitionContent_S0QG"><p>Этот функционал не обязателен при сдаче задания, но будет хорошей дополнительной
+практикой.</p></div></div>
