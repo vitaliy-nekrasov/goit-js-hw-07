@@ -64,5 +64,7 @@
 
 ## Закрытие с клавиатуры
 
-<div class="theme-admonition theme-admonition-caution alert alert--warning admonition_LlT9"><div class="admonitionHeading_tbUL"><span class="admonitionIcon_kALy"><svg viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"></path></svg></span>Внимание</div><div class="admonitionContent_S0QG"><p>Этот функционал не обязателен при сдаче задания, но будет хорошей дополнительной
-практикой.</p></div></div>
+```bash
+ВНИМАНИЕ!!!
+Этот функционал не обязателен при сдаче задания, но будет хорошей дополнительной практикой.
+```
